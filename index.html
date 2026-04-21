@@ -187,18 +187,23 @@
                     </a>
                 </div>
             </div>
-            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent simulated!');">
+            <script>var submitted=false;</script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { document.getElementById('confirmation-message').style.display='block'; document.querySelector('.contact-form').reset(); submitted=false; setTimeout(() => { document.getElementById('confirmation-message').style.display='none'; }, 5000); }"></iframe>
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdP2RlXAMF68cNx4Xm26pgz5HEZI-PYgOWKUz0yufyvG3_gaQ/formResponse" method="POST" target="hidden_iframe" class="contact-form" onsubmit="submitted=true;">
+                <div id="confirmation-message" style="display: none; background-color: rgba(46, 204, 113, 0.1); color: #2ecc71; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid rgba(46, 204, 113, 0.3); text-align: center; font-weight: 600;">
+                    ✅ Thank you! Your message has been sent successfully.
+                </div>
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" required placeholder="John Doe">
+                    <input type="text" id="name" name="entry.509567269" required placeholder="John Doe">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" required placeholder="john@example.com">
+                    <input type="email" id="email" name="entry.1966711237" required placeholder="john@example.com">
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" rows="4" required placeholder="Tell me about your project..."></textarea>
+                    <textarea id="message" name="entry.870684478" rows="4" required placeholder="Tell me about your project..."></textarea>
                 </div>
                 <button type="submit" class="btn-primary">Send Message</button>
             </form>
