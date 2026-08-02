@@ -1,82 +1,96 @@
 import FadeIn from "./FadeIn";
-import Terminal from "./Terminal";
+import AnimatedText from "./AnimatedText";
+import { ContactButton } from "./Buttons";
 
 export default function AboutSection() {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col items-center justify-center px-5 sm:px-8 md:px-10 py-24 gap-12 sm:gap-16"
+      className="min-h-screen relative flex flex-col items-center justify-center px-5 sm:px-8 md:px-10 py-20 overflow-hidden bg-[#0C0C0C]"
     >
-      <FadeIn y={40}>
-        <h2
-          className="hero-heading font-display font-black uppercase leading-none tracking-tight text-center"
-          style={{ fontSize: "clamp(2.75rem, 11vw, 8rem)" }}
-        >
-          About
-        </h2>
+      {/* 4 Decorative 3D Images */}
+      {/* Top-left: Moon icon */}
+      <FadeIn
+        delay={0.1}
+        x={-80}
+        y={0}
+        duration={0.9}
+        className="absolute top-[4%] left-[1%] sm:left-[2%] md:left-[4%] z-0 pointer-events-none"
+      >
+        <img
+          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png"
+          alt=""
+          className="w-[120px] sm:w-[160px] md:w-[210px] h-auto object-contain"
+        />
       </FadeIn>
 
-      <div className="grid md:grid-cols-2 gap-10 md:gap-16 max-w-5xl w-full items-center">
-        <FadeIn delay={0.1} x={-40} y={0}>
-          <div className="space-y-5">
-            <p
-              className="text-white/85 font-light leading-relaxed"
-              style={{ fontSize: "clamp(1rem, 2vw, 1.25rem)" }}
-            >
-              I'm Joel — a multidisciplinary designer and creator based in
-              Kollam, Kerala. My work spans{" "}
-              <span className="accent-gradient-text font-medium">
-                graphic design, video editing, branding, UI/UX design
-              </span>
-              , and{" "}
-              <span className="accent-gradient-text font-medium">
-                web development
-              </span>{" "}
-              (currently in active training).
-            </p>
+      {/* Bottom-left: 3D object */}
+      <FadeIn
+        delay={0.25}
+        x={-80}
+        y={0}
+        duration={0.9}
+        className="absolute bottom-[8%] left-[3%] sm:left-[6%] md:left-[10%] z-0 pointer-events-none"
+      >
+        <img
+          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/p59_1.4659672e.png"
+          alt=""
+          className="w-[100px] sm:w-[140px] md:w-[180px] h-auto object-contain"
+        />
+      </FadeIn>
 
-            <p
-              className="text-white/85 font-light leading-relaxed"
-              style={{ fontSize: "clamp(1rem, 2vw, 1.25rem)" }}
-            >
-              I run a small independent creative studio called{" "}
-              <a
-                href="https://vyqo-dsgn.vercel.app"
-                target="_blank"
-                rel="noreferrer"
-                className="accent-gradient-text font-medium hover:opacity-80 transition-opacity"
-              >
-                VYQO DSGN
-              </a>
-              , crafting high-impact visual identities, motion edits, and UI
-              layouts for creators and tech brands.
-            </p>
+      {/* Top-right: Lego icon */}
+      <FadeIn
+        delay={0.15}
+        x={80}
+        y={0}
+        duration={0.9}
+        className="absolute top-[4%] right-[1%] sm:right-[2%] md:right-[4%] z-0 pointer-events-none"
+      >
+        <img
+          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png"
+          alt=""
+          className="w-[120px] sm:w-[160px] md:w-[210px] h-auto object-contain"
+        />
+      </FadeIn>
 
-            <p className="text-[#A0A0A0] font-light leading-relaxed text-sm">
-              Currently pursuing my Computer Science degree to bridge clean
-              design with frontend code fundamentals. This site serves as a
-              live playground for my work.
-            </p>
+      {/* Bottom-right: 3D group */}
+      <FadeIn
+        delay={0.3}
+        x={80}
+        y={0}
+        duration={0.9}
+        className="absolute bottom-[8%] right-[3%] sm:right-[6%] md:right-[10%] z-0 pointer-events-none"
+      >
+        <img
+          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/Group_134-1.2e04f3ce.png"
+          alt=""
+          className="w-[130px] sm:w-[170px] md:w-[220px] h-auto object-contain"
+        />
+      </FadeIn>
 
-            <div className="pt-4">
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-full text-ink font-semibold uppercase tracking-widest px-8 py-3.5 text-sm transition-all duration-300 hover:scale-105 hover:brightness-110"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #FFA53E 0%, #FF7A1A 100%)",
-                  boxShadow: "0 4px 24px rgba(255, 122, 26, 0.3)",
-                }}
-              >
-                Get In Touch
-              </a>
-            </div>
-          </div>
+      {/* Content Container */}
+      <div className="relative z-10 flex flex-col items-center gap-10 sm:gap-14 md:gap-16 max-w-4xl text-center">
+        <FadeIn delay={0} y={40}>
+          <h2
+            className="hero-heading font-black uppercase leading-none tracking-tight text-center"
+            style={{ fontSize: "clamp(3rem, 12vw, 160px)" }}
+          >
+            About me
+          </h2>
         </FadeIn>
 
-        <FadeIn delay={0.25} x={40} y={0} className="flex justify-center">
-          <Terminal />
-        </FadeIn>
+        <div className="flex flex-col items-center gap-16 sm:gap-20 md:gap-24">
+          <AnimatedText
+            text="With more than five years of experience in design, i focus on branding, web design, and user experience, i truly enjoy working with businesses that aim to stand out and present their best image. Let's build something incredible together!"
+            className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[560px]"
+            style={{ fontSize: "clamp(1rem, 2vw, 1.35rem)" }}
+          />
+
+          <FadeIn delay={0.2} y={20}>
+            <ContactButton label="Contact Me" />
+          </FadeIn>
+        </div>
       </div>
     </section>
   );

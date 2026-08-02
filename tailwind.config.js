@@ -4,30 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#0B0B0B",
-        bone: "#EDEBE6",
-        mist: "#A0A0A0",
-        accent: "#FF7A1A",
-        "accent-light": "#FFA53E",
+        darkBg: "#0C0C0C",
+        textColor: "#D7E2EA",
       },
       fontFamily: {
-        display: ["'Inter'", "sans-serif"],
-        body: ["'Inter'", "sans-serif"],
-        mono: ["'JetBrains Mono'", "monospace"],
-      },
-      keyframes: {
-        "marquee-left": {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-33.333%)" },
-        },
-        "marquee-right": {
-          "0%": { transform: "translateX(-33.333%)" },
-          "100%": { transform: "translateX(0)" },
-        },
-      },
-      animation: {
-        "marquee-left": "marquee-left 40s linear infinite",
-        "marquee-right": "marquee-right 40s linear infinite",
+        sans: ["'Kanit'", "sans-serif"],
+        display: ["'Kanit'", "sans-serif"],
       },
     },
   },

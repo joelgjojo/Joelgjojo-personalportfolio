@@ -1,21 +1,17 @@
 import HeroSection from "./components/HeroSection";
 import MarqueeSection from "./components/MarqueeSection";
 import AboutSection from "./components/AboutSection";
-import SkillsSection from "./components/SkillsSection";
-import ProjectShowcaseSection from "./components/ProjectShowcaseSection";
-import StackedProjectCardsSection from "./components/StackedProjectCardsSection";
-import ContactSection from "./components/ContactSection";
+import ServicesSection from "./components/ServicesSection";
+import ProjectsSection from "./components/ProjectsSection";
 
 export default function App() {
   return (
-    <div className="bg-ink" style={{ overflowX: "clip" }}>
+    <div className="bg-[#0C0C0C]" style={{ overflowX: "clip" }}>
       <HeroSection />
       <MarqueeSection />
       <AboutSection />
-      <SkillsSection />
-      <ProjectShowcaseSection />
-      <StackedProjectCardsSection />
-      <ContactSection />
+      <ServicesSection />
+      <ProjectsSection />
     </div>
   );
 }
