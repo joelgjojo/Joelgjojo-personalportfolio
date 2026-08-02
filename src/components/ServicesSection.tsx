@@ -3,28 +3,28 @@ import FadeIn from "./FadeIn";
 const services = [
   {
     num: "01",
-    name: "3D Modeling",
-    desc: "Creation of detailed objects, characters, or environments tailored to specific client needs, ideal for games, products, and visualizations.",
+    name: "Graphic Design",
+    desc: "High-contrast YouTube thumbnails, key art, and promotional visuals built to capture feed attention.",
   },
   {
     num: "02",
-    name: "Rendering",
-    desc: "High-quality, photorealistic renders that showcase designs with custom lighting, textures, and materials to bring concepts to life.",
+    name: "Video Editing",
+    desc: "4K edits with tight pacing, sound design, transitions, and cinematic color grading for creators and brands.",
   },
   {
     num: "03",
-    name: "Motion Design",
-    desc: "Dynamic animations and motion graphics that add energy and storytelling to brands, products, and digital experiences.",
+    name: "Branding",
+    desc: "Crafting cohesive visual identities -- from marks and typography systems to overlay kits and guidelines.",
   },
   {
     num: "04",
-    name: "Branding",
-    desc: "Crafting cohesive visual identities -- from logos to full brand systems -- that communicate a clear and memorable presence.",
+    name: "UI/UX Design",
+    desc: "User-centered interface wireframes and sleek layouts built around intuitive digital product interaction.",
   },
   {
     num: "05",
-    name: "Web Design",
-    desc: "Designing clean, modern, and conversion-focused websites with attention to layout, typography, and user experience.",
+    name: "Web Development",
+    desc: "Building and shipping real web applications using modern React, TypeScript, and Tailwind CSS fundamentals.",
   },
 ];
 

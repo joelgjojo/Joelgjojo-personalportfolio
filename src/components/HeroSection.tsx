@@ -4,7 +4,7 @@ import { ContactButton } from "./Buttons";
 
 const links = [
   { label: "About", href: "#about" },
-  { label: "Price", href: "#services" },
+  { label: "Services", href: "#services" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
@@ -15,15 +15,27 @@ export default function HeroSection() {
       {/* Navbar */}
       <FadeIn delay={0} y={-20}>
         <nav className="flex items-center justify-between px-6 md:px-10 pt-6 md:pt-8 relative z-20">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] hover:opacity-70 transition-opacity duration-200"
-            >
-              {link.label}
-            </a>
-          ))}
+          <a href="#home" className="flex items-center gap-3 group">
+            <img
+              src="/assets/user.png"
+              alt="Joel G Jojo"
+              className="w-9 h-9 rounded-full object-cover border border-[#D7E2EA]/20 group-hover:border-[#B600A8] transition-colors"
+            />
+            <span className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] group-hover:text-white transition-colors">
+              JOEL G JOJO
+            </span>
+          </a>
+          <div className="flex items-center gap-4 sm:gap-8">
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] hover:opacity-70 transition-opacity duration-200"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </nav>
       </FadeIn>
 
@@ -31,7 +43,7 @@ export default function HeroSection() {
       <div className="overflow-hidden px-6 md:px-10 relative z-0">
         <FadeIn delay={0.15} y={40}>
           <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw] mt-6 sm:mt-4 md:-mt-5">
-            Hi, i&apos;m jack
+            Hi, i&apos;m joel
           </h1>
         </FadeIn>
       </div>
@@ -51,7 +63,7 @@ export default function HeroSection() {
         >
           <img
             src="/assets/portrait.png"
-            alt="Jack -- 3D Creator"
+            alt="Joel G Jojo — Designer & Developer"
             className="w-full h-auto object-contain select-none"
           />
         </Magnet>
@@ -61,15 +73,15 @@ export default function HeroSection() {
       <div className="flex justify-between items-end px-6 md:px-10 pb-7 sm:pb-8 md:pb-10 relative z-20">
         <FadeIn delay={0.35} y={20}>
           <p
-            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]"
+            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[180px] sm:max-w-[240px] md:max-w-[280px]"
             style={{ fontSize: "clamp(0.75rem, 1.4vw, 1.5rem)" }}
           >
-            a 3d creator driven by crafting striking and unforgettable projects
+            a multidisciplinary designer & developer driven by crafting striking visual systems
           </p>
         </FadeIn>
 
         <FadeIn delay={0.5} y={20}>
-          <ContactButton label="Contact Me" />
+          <ContactButton label="Contact Me" href="mailto:joelgjojo008@gmail.com" />
         </FadeIn>
       </div>
     </section>

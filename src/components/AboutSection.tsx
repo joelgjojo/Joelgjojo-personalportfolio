@@ -2,6 +2,15 @@ import FadeIn from "./FadeIn";
 import AnimatedText from "./AnimatedText";
 import { ContactButton } from "./Buttons";
 
+const contactLinks = [
+  { label: "Email", href: "mailto:joelgjojo008@gmail.com" },
+  { label: "WhatsApp", href: "https://wa.me/918943262406" },
+  { label: "Instagram", href: "https://www.instagram.com/joelgjojo/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/joelgjojo008/" },
+  { label: "GitHub", href: "https://github.com/joelgjojo" },
+  { label: "Studio (VYQO DSGN)", href: "https://vyqo-dsgn.vercel.app" },
+];
+
 export default function AboutSection() {
   return (
     <section
@@ -80,15 +89,29 @@ export default function AboutSection() {
           </h2>
         </FadeIn>
 
-        <div className="flex flex-col items-center gap-16 sm:gap-20 md:gap-24">
+        <div className="flex flex-col items-center gap-10 sm:gap-14 md:gap-16">
           <AnimatedText
-            text="With more than five years of experience in design, i focus on branding, web design, and user experience, i truly enjoy working with businesses that aim to stand out and present their best image. Let's build something incredible together!"
-            className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[560px]"
+            text="I'm Joel — a multidisciplinary designer and developer based in Kollam, Kerala. I run a small independent creative studio called VYQO DSGN, crafting high-impact visual identities, motion edits, and UI layouts for creators and tech brands. Currently pursuing my Computer Science degree to bridge design with clean code. Let's build something incredible together!"
+            className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[620px]"
             style={{ fontSize: "clamp(1rem, 2vw, 1.35rem)" }}
           />
 
-          <FadeIn delay={0.2} y={20}>
-            <ContactButton label="Contact Me" />
+          <FadeIn delay={0.2} y={20} className="flex flex-col items-center gap-8">
+            <ContactButton label="Get In Touch" href="mailto:joelgjojo008@gmail.com" />
+
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm text-[#D7E2EA]/70 font-mono pt-4">
+              {contactLinks.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white transition-colors underline underline-offset-4 decoration-[#B600A8]/50"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
           </FadeIn>
         </div>
       </div>

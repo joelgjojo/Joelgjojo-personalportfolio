@@ -1,7 +1,15 @@
-export function ContactButton({ label = "Contact Me" }: { label?: string }) {
+export function ContactButton({
+  label = "Contact Me",
+  href = "mailto:joelgjojo008@gmail.com",
+}: {
+  label?: string;
+  href?: string;
+}) {
   return (
     <a
-      href="#contact"
+      href={href}
+      target="_blank"
+      rel="noreferrer"
       className="inline-flex items-center justify-center rounded-full text-white font-medium uppercase tracking-widest px-8 py-3 sm:px-10 sm:py-3.5 md:px-12 md:py-4 text-xs sm:text-sm md:text-base transition-transform duration-300 hover:scale-105 select-none"
       style={{
         background:
@@ -19,7 +27,7 @@ export function ContactButton({ label = "Contact Me" }: { label?: string }) {
 
 export function LiveProjectButton({
   label = "Live Project",
-  href = "#",
+  href = "https://vyqo-dsgn.vercel.app",
 }: {
   label?: string;
   href?: string;
@@ -27,6 +35,8 @@ export function LiveProjectButton({
   return (
     <a
       href={href}
+      target="_blank"
+      rel="noreferrer"
       className="inline-flex items-center justify-center rounded-full border-2 border-[#D7E2EA] text-[#D7E2EA] font-medium uppercase tracking-widest px-8 py-3 sm:px-10 sm:py-3.5 text-sm sm:text-base transition-colors duration-300 hover:bg-[#D7E2EA]/10 select-none whitespace-nowrap"
     >
       {label}
