@@ -207,14 +207,19 @@ function ProgressDot({
 }) {
   const rangeStart = index / total;
   const rangeEnd = (index + 1) / total;
+  const r0 = Math.max(0, rangeStart - 0.05);
+  const r1 = rangeStart;
+  const r2 = rangeEnd;
+  const r3 = Math.min(1, rangeEnd + 0.05);
+
   const opacity = useTransform(
     progress,
-    [rangeStart - 0.05, rangeStart, rangeEnd, rangeEnd + 0.05],
+    [r0, r1, r2, r3],
     [0.3, 1, 1, 0.3]
   );
   const scale = useTransform(
     progress,
-    [rangeStart - 0.05, rangeStart, rangeEnd, rangeEnd + 0.05],
+    [r0, r1, r2, r3],
     [0.8, 1.2, 1.2, 0.8]
   );
 
