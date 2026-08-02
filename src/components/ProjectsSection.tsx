@@ -39,8 +39,8 @@ const projects: Project[] = [
     category: "UI/UX & Web Dev",
     name: "Bro Barber & Digital Tools",
     link: "https://github.com/joelgjojo",
-    col1: ["/assets/new_work2.png", "/assets/thumb3.jpg"],
-    col2: "/assets/photo1.jpg",
+    col1: ["/assets/bro_barber_hero.png", "/assets/vyqo_logo_card.png"],
+    col2: "/assets/vyqo_web_solutions.png",
   },
 ];
 
